@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://site-7bc4881f65e1420a9141dbbe837387e2.freebuff.page"><b>Open the map</b></a> ·
-  <a href="https://site-7bc4881f65e1420a9141dbbe837387e2.freebuff.page/story"><b>Read the story</b></a> ·
+  <a href="https://accord-map.vercel.app"><b>Open the map</b></a> ·
+  <a href="https://accord-map.vercel.app/story"><b>Read the story</b></a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="#run-it-yourself">Run it yourself</a>
 </p>
@@ -65,7 +65,7 @@ have repeated it (r = −0.95).
 
 <img src="docs/story.png" alt="The scroll-driven explainer: sticky map with story cards" width="100%" />
 
-[`/story`](https://site-7bc4881f65e1420a9141dbbe837387e2.freebuff.page/story) is a 13-step scroll-driven explainer,
+[`/story`](https://accord-map.vercel.app/story) is a 13-step scroll-driven explainer,
 *How 24,063 perfumes sort themselves*. The map is pinned beside the text and moves as you scroll. Every number in
 the copy is read from data the pipeline measured, so the words can't drift from the data.
 
