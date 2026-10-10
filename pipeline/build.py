@@ -1,4 +1,4 @@
-"""Build the Nose Map catalog from the Kaggle Fragrantica dataset.
+"""Build the Accord catalog from the Kaggle Fragrantica dataset.
 
 Reads data/raw/fra_cleaned.csv (structured pyramids) and data/raw/fra_perfumes.csv
 (display names and the longer accord lists), builds TF-IDF note vectors over the

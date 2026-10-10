@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/banner.png" alt="Nose Map: how 24,063 perfumes sort themselves" width="100%" />
+  <img src="docs/banner.png" alt="Accord: how 24,063 perfumes sort themselves" width="100%" />
 </p>
 
-<h1 align="center">Nose Map</h1>
+<h1 align="center">Accord</h1>
 
 <p align="center">
   Find perfumes that smell like the ones you already love.<br />
@@ -22,9 +22,11 @@
 
 ---
 
-Every perfume in the store starts to smell like alcohol after the fifth tester. Nose Map is for the part before
+Every perfume in the store starts to smell like alcohol after the fifth tester. Accord is for the part before
 that: deciding what is worth smelling at all. Search a perfume you know, see what it is made of, what smells like
 it, what it costs, and whether a cheaper bottle lists the same ingredients.
+
+The name comes from perfumery: an accord is a handful of notes blended until they read as one new smell.
 
 Nobody drew the map. A computer read every perfume's ingredient list and put the ones that share ingredients next
 to each other. The result has real structure: islands built around signature notes like peony, mint and oud, musk
@@ -106,7 +108,7 @@ flowchart LR
   E --> I
   H --> I
   G --> J{{catalog.json<br/>details, 1 MB}}
-  I --> K[React + canvas app<br/>on a Cloudflare Worker]
+  I --> K[React + canvas<br/>static app]
   J --> K
 ```
 

@@ -173,7 +173,7 @@ export default function Detail({ ix, i, onSelect, owned, onOwn, onLocate }: Prop
           ))}
         </div>
         <p className="hint">
-          Nose Map doesn't track live prices or stock. These links open a live search on each site, so what you see
+          Accord doesn't track live prices or stock. These links open a live search on each site, so what you see
           there is current. Not affiliate links.
         </p>
       </section>

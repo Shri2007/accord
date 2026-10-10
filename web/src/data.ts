@@ -284,7 +284,7 @@ export function blindBuy(ix: Index, i: number, owned: Set<number>): Verdict {
 
 export type ShopLink = { label: string; url: string; note: string };
 
-/** Live searches on retailers and sample sites. Nose Map has no price or stock data of its own. */
+/** Live searches on retailers and sample sites. Accord has no price or stock data of its own. */
 export function shopLinks(ix: Index, i: number): { samples: ShopLink[]; bottles: ShopLink[] } {
   const P = ix.c.perfumes;
   const q = encodeURIComponent(`${P.brand[i]} ${P.name[i]}`);
@@ -344,13 +344,14 @@ export function genderLabel(ix: Index, i: number): string {
   return g === "men" ? "Masculine" : g === "women" ? "Feminine" : "Unisex";
 }
 
-const OWNED_KEY = "nosemap:owned";
-const OLD_OWNED_KEY = "drydown:owned"; // the app's earlier name; read once so saved shelves carry over
+const OWNED_KEY = "accord:owned";
+// Keys from the app's earlier names, read once so saved shelves carry over.
+const OLD_OWNED_KEYS = ["nosemap:owned", "drydown:owned"];
 
 export function loadOwned(): Set<string> {
   try {
     // Older saves kept the ".html" suffix that catalog URLs no longer carry.
-    const saved: string[] = JSON.parse(localStorage.getItem(OWNED_KEY) ?? localStorage.getItem(OLD_OWNED_KEY) ?? "[]");
+    const saved: string[] = JSON.parse([OWNED_KEY, ...OLD_OWNED_KEYS].map((k) => localStorage.getItem(k)).find((v) => v != null) ?? "[]");
     return new Set(saved.map((u) => u.replace(/\.html$/, "")));
   } catch {
     return new Set();

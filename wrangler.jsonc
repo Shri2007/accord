@@ -1,5 +1,5 @@
 {
-  "name": "nose-map",
+  "name": "accord",
   "main": "worker/index.js",
   "compatibility_date": "2026-10-01",
   "assets": { "directory": "./web/dist", "binding": "ASSETS", "not_found_handling": "single-page-application" }

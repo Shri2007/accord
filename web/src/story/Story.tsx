@@ -245,7 +245,7 @@ export default function Story() {
     <div className="story">
       <header className="s-hero">
         <a className="s-brand" href="/">
-          Nose Map
+          Accord
         </a>
         <p className="s-kicker">A data story</p>
         <h1>How 24,063 perfumes sort themselves</h1>
@@ -341,7 +341,7 @@ function Method({ map }: { map: MapData }) {
       </p>
       <p className="s-fine">
         Built by Shri Charan Sriram. The interactive map adds prices, sample links and a blind-buy check for every
-        perfume. <a href="/">Open Nose Map →</a>
+        perfume. <a href="/">Open Accord →</a>
       </p>
     </section>
   );

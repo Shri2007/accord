@@ -8,7 +8,7 @@ import { loadMap, type MapData } from "./mapdata";
 type Mode = "find" | "notes";
 type Sheet = "peek" | "half" | "full";
 
-const GUIDE_KEY = "nosemap:guide-seen";
+const GUIDE_KEY = "accord:guide-seen";
 const PHONE = "(max-width: 860px)";
 const PEEK = 132;
 
@@ -106,7 +106,7 @@ export default function App() {
     const dark = theme ? theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
     const next = dark ? "light" : "dark";
     document.documentElement.dataset.theme = next;
-    localStorage.setItem("nosemap:theme", next);
+    localStorage.setItem("accord:theme", next);
     setTheme(next);
   };
 
@@ -189,7 +189,7 @@ export default function App() {
     <div className={compact ? "page is-compact" : "page"}>
       <header className="top">
         <div className="brand">
-          <h1>Nose Map</h1>
+          <h1>Accord</h1>
           <p>
             Find perfumes that smell like the ones you already love. Search one you know to see what's in it, what
             smells like it, what it costs, and where to get a cheap sample before you spend on a bottle.

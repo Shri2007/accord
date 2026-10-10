@@ -39,7 +39,7 @@ def main():
     ax.axis("off")
     plt.rcParams["font.serif"] = ["Iowan Old Style", "Palatino", "Georgia", "DejaVu Serif"]
     top = {"va": "top", "ha": "left"}
-    fig.text(0.05, 0.9, "NOSE MAP · A DATA STORY", fontsize=15, color="#914c00", weight="bold", **top)
+    fig.text(0.05, 0.9, "ACCORD · A DATA STORY", fontsize=15, color="#914c00", weight="bold", **top)
     fig.text(0.05, 0.8, "How 24,063\nperfumes sort\nthemselves", fontsize=48, color=INK, family="serif",
              linespacing=1.0, **top)
     fig.text(0.05, 0.33, "Islands of peony and oud, musk everywhere,\nclones stacked on clones.", fontsize=16,
