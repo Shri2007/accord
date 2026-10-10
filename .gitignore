@@ -1,0 +1,9 @@
+.venv/
+node_modules/
+web/dist/
+data/raw/
+.wrangler/
+.freebuff/
+.DS_Store
+__pycache__/
+*.pyc

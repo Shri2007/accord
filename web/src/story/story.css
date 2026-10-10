@@ -1,0 +1,44 @@
+/* Scroll-driven explainer. Tokens (colours, fonts) come from ../styles.css. */
+.story { color: var(--text-primary); }
+.s-hero { max-width: 760px; margin: 0 auto; padding: 72px 24px 48px; }
+.s-brand { font-family: var(--serif); font-size: 20px; color: var(--text-primary); text-decoration: none; }
+.s-kicker { margin: 40px 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.s-hero h1 { margin: 0; font-size: clamp(40px, 6vw, 68px); line-height: 1.02; }
+.s-dek { margin: 20px 0 0; font-size: 20px; line-height: 1.5; color: var(--text-secondary); }
+.s-byline { margin: 20px 0 0; font-size: 14px; color: var(--text-muted); }
+.s-cue { margin: 40px 0 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+
+.s-scrolly { position: relative; display: grid; grid-template-columns: minmax(320px, 420px) minmax(0, 1fr); gap: 32px; max-width: 1440px; margin: 0 auto; padding: 0 28px; }
+.s-figure { position: sticky; top: 0; height: 100vh; grid-column: 2; grid-row: 1; padding: 24px 0; }
+.s-figure .map { height: 100%; min-height: 0; }
+.s-steps { grid-column: 1; grid-row: 1; padding: 30vh 0 40vh; }
+.s-step { min-height: 85vh; display: flex; align-items: center; }
+.s-card { padding: 22px 24px; background: var(--surface-0); border: 1px solid var(--line); border-radius: 8px; opacity: 0.45; transition: opacity 0.3s ease; }
+.s-step.is-active .s-card { opacity: 1; box-shadow: 0 10px 30px rgb(0 0 0 / 0.08); }
+.s-num { margin: 0 0 6px; font-size: 12px; color: var(--text-muted); }
+.s-card h2 { margin: 0 0 10px; font-size: 28px; line-height: 1.15; }
+.s-card p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--text-secondary); }
+.s-card .s-fine { margin-top: 12px; font-size: 13px; color: var(--text-muted); }
+.s-cta { display: inline-block; margin-top: 18px; text-decoration: none; }
+
+.s-method { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; border-top: 1px solid var(--line); }
+.s-method h2 { font-size: 30px; margin: 0 0 16px; }
+.s-method p { font-size: 17px; line-height: 1.6; color: var(--text-secondary); }
+.s-method .s-fine { font-size: 14px; color: var(--text-muted); }
+
+@media (prefers-reduced-motion: reduce) { .s-card { transition: none; } }
+
+/* Phone: the map pins to the top of the screen and the cards scroll over its lower part. */
+@media (max-width: 860px) {
+  .s-hero { padding: 40px 18px 32px; }
+  .s-kicker { margin-top: 28px; }
+  .s-dek { font-size: 18px; }
+  .s-scrolly { display: block; padding: 0; }
+  .s-figure { height: 100svh; padding: 0; }
+  .s-figure .map { border: 0; border-radius: 0; }
+  .s-steps { position: relative; z-index: 2; margin-top: -100svh; padding: 60svh 14px 40svh; }
+  .s-step { min-height: 90svh; align-items: flex-end; }
+  .s-card { opacity: 1; background: color-mix(in srgb, var(--surface-0) 94%, transparent); backdrop-filter: blur(6px); }
+  .s-card h2 { font-size: 22px; }
+  .s-card p { font-size: 15px; }
+}
